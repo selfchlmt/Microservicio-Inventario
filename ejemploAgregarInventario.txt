@@ -1,0 +1,3 @@
+curl -X POST http://localhost:8081/inventario ^ 
+   -H "Content-Type: application/json" ^
+   -d "{\"nombre\":\"Laptop\",\"cantidad\":5,\"precio\":15000.0}"
