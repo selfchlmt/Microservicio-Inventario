@@ -5,23 +5,13 @@ Permite registrar y consultar productos de manera sencilla mediante una API REST
 
 ---
 
-## 📌 Arquitectura
+## Arquitectura
 
 El sistema sigue una arquitectura basada en **microservicios** y **Spring Boot**.  
 
-```mermaid
-flowchart TD
-    A[Cliente (Postman/Frontend)] -->|HTTP REST| B[Spring Boot Inventario API]
-    B -->|JPA/Hibernate| C[(Base de Datos PostgreSQL)]
-```
-
-- **Cliente**: Puede ser Postman, curl o una app frontend.  
-- **API REST (Spring Boot)**: Expone endpoints para CRUD de productos.  
-- **Base de datos**: PostgreSQL almacena los productos en la tabla `producto`.
-
 ---
 
-## 📌 Requerimientos
+## Requerimientos
 
 Para ejecutar este proyecto necesitas:
 
@@ -32,7 +22,7 @@ Para ejecutar este proyecto necesitas:
 
 ---
 
-## 📌 Instrucciones de ejecución
+## Instrucciones de ejecución
 
 1. **Clona el repositorio:**
    ```bash
@@ -72,34 +62,3 @@ Para ejecutar este proyecto necesitas:
 
 5. **Accede a la API en:**  
    [http://localhost:8081](http://localhost:8081)
-
----
-
-## 📌 Ejemplo de uso con Postman
-
-👉 Crear un producto (POST):  
-
-- **URL:** `http://localhost:8081/api/productos`  
-- **Método:** `POST`  
-- **Body (JSON):**
-  ```json
-  {
-    "nombre": "Laptop",
-    "precio": 15000,
-    "stock": 5
-  }
-  ```
-
-👉 Obtener todos los productos (GET):  
-- **URL:** `http://localhost:8081/api/productos`  
-- **Método:** `GET`
-
-👉 Obtener un producto por ID (GET):  
-- **URL:** `http://localhost:8081/api/productos/1`  
-
-👉 Eliminar un producto (DELETE):  
-- **URL:** `http://localhost:8081/api/productos/1`  
-
----
-
-✅ Con este README cumples con **Arquitectura + Requerimientos + Instrucciones** → listo para la rúbrica de **20 puntos** 🎯
